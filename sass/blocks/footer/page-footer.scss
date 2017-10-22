@@ -1,0 +1,157 @@
+.page-footer {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include textblock;
+}
+
+.page-footer__block {
+  display: flex;
+  justify-content: center;
+  width: 280px;
+}
+
+.page-footer__logo {
+  display: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover .page-footer__icon,
+  &:focus .page-footer__icon {
+    fill: $footer-hover;
+  }
+
+  &:active .page-footer__icon {
+    fill: $footer-hover;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__icon--desktop {
+  display: none;
+}
+
+.page-footer__social {
+  margin-top: 39px;
+  margin-bottom: 39px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__developed {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.page-footer__academy-link {
+  fill: $blgreen;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    fill: $footer-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-footer--index {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 15px;
+  }
+
+  .page-footer__logo,
+  .page-footer__copyright {
+    width: 24.19%;
+  }
+
+  .page-footer__social {
+    width: 50%;
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    justify-content: space-between;
+  }
+
+  .page-footer__developed {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .page-footer__academy-link {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding-top: 19px;
+  }
+
+  .page-footer--index {
+    padding-top: 9px;
+  }
+
+  .page-footer__wrapper {
+    padding-top: 0;
+  }
+
+  .page-footer__icon {
+    margin-right: auto;
+  }
+
+  .page-footer__icon--mobile {
+    display: none;
+  }
+
+  .page-footer__icon--desktop {
+    display: block;
+  }
+
+  .page-footer__logo,
+  .page-footer__copyright {
+    width: 16.3%;
+  }
+
+  .page-footer__developed {
+    font-size: 18px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

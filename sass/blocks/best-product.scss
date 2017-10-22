@@ -1,0 +1,29 @@
+.best-product__subtitle {
+  text-transform: uppercase;
+  color: $blgreen;
+}
+
+.best-product__options {
+  width: 100%;
+  margin-bottom: 28px;
+  border-spacing: 0;
+
+  td {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.best-product__option {
+  width: 36.54%;
+}
+
+.best-product__footer {
+  text-align: center;
+}
+
+.best-product__order-btn {
+  font-size: 17px;
+  width: 100%;
+}

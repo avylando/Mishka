@@ -1,0 +1,42 @@
+.social-list {
+  display: flex;
+
+  @include list-unstyle;
+}
+
+.social-list__item {
+  display: block;
+}
+
+.social-list__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  outline: none;
+
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    fill: $footer-hover;
+  }
+
+  &:active .social-list__icon {
+    fill: $footer-hover;
+    opacity: 0.3;
+  }
+}
+
+.social-list__item:nth-child(2) {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.social-list__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

@@ -1,0 +1,22 @@
+.contacts__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__text {
+  width: 69.23%;
+}
+
+.contacts__map {
+  height: 457px;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include lr-padding-reset;
+}
+
+.contacts__button {
+  width: 100%;
+  margin-top: 40px;
+}

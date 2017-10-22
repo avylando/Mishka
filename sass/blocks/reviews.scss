@@ -1,0 +1,28 @@
+.reviews__author {
+  color: #000000;
+}
+
+.reviews__navigation {
+  display: flex;
+}
+
+.reviews__nav-button {
+  width: 50%;
+  background-color: transparent;
+  border: 1px solid $border-color;
+  cursor: pointer;
+
+  &:hover .reviews__nav-button-icon,
+  &:focus .reviews__nav-button-icon {
+    opacity: 0.6;
+  }
+
+  &:active .reviews__nav-button-icon {
+    opacity: 0.3;
+  }
+}
+
+.reviews__button {
+  width: 100%;
+  margin-top: 38px;
+}
