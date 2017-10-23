@@ -4,6 +4,10 @@
   background-position: 50% -19%;
 }
 
+.index-head__breadcrumbs {
+  display: none;
+}
+
 .index-head__top {
   text-align: center;
 }
@@ -57,4 +61,59 @@
 
 .index-head__btn-icon {
   fill: #3bb09d;
+}
+
+@media (min-width: $tablet-width) {
+  .index-head {
+    position: relative;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: 50% 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+    }
+  }
+
+  .index-head__breadcrumbs {
+    display: block;
+  }
+
+  .index-head__list {
+    display: none;
+  }
+
+  .index-head__note {
+    text-align: right;
+    padding-top: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .index-head__title {
+    padding-top: 100px;
+    padding-bottom: 350px;
+
+    @include ttl-style-tablet;
+  }
+
+  .index-head__buttons {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  .index-head__button {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .index-head__btn-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

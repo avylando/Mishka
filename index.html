@@ -68,6 +68,13 @@
 
     <section class="index-head">
       <div class="container">
+        <div class="index-head__breadcrumbs">
+          <ul class="index-head__list">
+            <li class="index-head__item"><a class="index-head__item-link" href="#">Новые поступления</a></li>
+            <li class="index-head__item"><a class="index-head__item-link" href="#">Распродажа</a></li>
+          </ul>
+          <p class="index-head__note">Бесплатная доставка по России</p>
+        </div>
         <div class="index-head__top">
           <h1 class="index-head__title">Милые штуки ручной <br>работы для дома</h1>
         </div>
@@ -117,7 +124,11 @@
               </tr>
             </table>
           </div>
-          <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+          </picture>
           <div class="best-product__footer">
             <b class="best-product__price">Цена: 990 руб.</b>
             <button class="best-product__order-btn button">Заказать</button>
@@ -125,47 +136,55 @@
         </div>
       </article>
 
-      <section class="features">
-        <h2 class="features__title">Коротко о нас</h2>
-        <div class="features__block">
-          <svg class="features__icon" width="32" height="37">
-            <use xlink:href="#icon-feature-flower"></use>
-          </svg>
-          <p class="features__text">Экологически чистые материалы</p>
-        </div>
-        <div class="features__block">
-          <svg class="features__icon" width="47" height="27">
-            <use xlink:href="#icon-feature-money"></use>
-          </svg>
-          <p class="features__text">Скандинавский стиль по российской цене</p>
-        </div>
-        <div class="features__block">
-          <svg class="features__icon" width="33" height="28">
-            <use xlink:href="#icon-feature-heart"></use>
-          </svg>
-          <p class="features__text">Увеличивает лайки на фотографиях</p>
-        </div>
-        <div class="features__block">
-          <svg class="features__icon" width="34" height="34">
-            <use xlink:href="#icon-feature-ball"></use>
-          </svg>
-          <p class="features__text">Связано вручную с любовью и умилением</p>
-        </div>
-        <div class="features__block">
-          <svg class="features__icon" width="54" height="23">
-            <use xlink:href="#icon-feature-rocket"></use>
-          </svg>
-          <p class="features__text">Поддержка отечественного производителя</p>
-        </div>
-        <div class="features__block">
-          <svg class="features__icon" width="33" height="32">
-            <use xlink:href="#icon-feature-gift"></use>
-          </svg>
-          <p class="features__text">Поставляется в подарочной упаковке</p>
-        </div>
-      </section>
-
     </div>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="features__title">Коротко о нас</h2>
+        <div class="features__wrapper">
+          <div class="features__column">
+            <div class="features__block">
+              <svg class="features__icon" width="32" height="37">
+                <use xlink:href="#icon-feature-flower"></use>
+              </svg>
+              <p class="features__text">Экологически чистые материалы</p>
+            </div>
+            <div class="features__block">
+              <svg class="features__icon" width="47" height="27">
+                <use xlink:href="#icon-feature-money"></use>
+              </svg>
+              <p class="features__text">Скандинавский стиль по российской цене</p>
+            </div>
+            <div class="features__block">
+              <svg class="features__icon" width="33" height="28">
+                <use xlink:href="#icon-feature-heart"></use>
+              </svg>
+              <p class="features__text">Увеличивает лайки на фотографиях</p>
+            </div>
+          </div>
+          <div class="features__column">
+            <div class="features__block">
+              <svg class="features__icon" width="34" height="34">
+                <use xlink:href="#icon-feature-ball"></use>
+              </svg>
+              <p class="features__text">Связано вручную с любовью и умилением</p>
+            </div>
+            <div class="features__block">
+              <svg class="features__icon" width="54" height="23">
+                <use xlink:href="#icon-feature-rocket"></use>
+              </svg>
+              <p class="features__text">Поддержка отечественного производителя</p>
+            </div>
+            <div class="features__block">
+              <svg class="features__icon" width="33" height="32">
+                <use xlink:href="#icon-feature-gift"></use>
+              </svg>
+              <p class="features__text">Поставляется в подарочной упаковке</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="reviews">
       <div class="container">
@@ -174,23 +193,26 @@
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
             В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
             больше лайков!</p>
-          <h3 class="reviews__author">Анастасия Красильникова</h3>
-          <p class="reviews__nickname">@misssssiskras</p>
+          <div class="reviews__wrapper">
+            <div class="reviews__caption">
+              <h3 class="reviews__author">Анастасия Красильникова</h3>
+              <p class="reviews__nickname">@misssssiskras</p>
+            </div>
+            <div class="reviews__navigation">
+              <button class="reviews__nav-button reviews__nav-button--left" type="button">
+                <svg class="reviews__nav-button-icon" width="50" height="26">
+                  <use xlink:href="#icon-left-arrow"></use>
+                </svg>
+              </button>
+              <button class="reviews__nav-button reviews__nav-button--right" type="button">
+                <svg class="reviews__nav-button-icon" width="50" height="26">
+                  <use xlink:href="#icon-right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="reviews__button button" type="button">Написать</button>
         </div>
-        <div class="reviews__navigation">
-          <button class="reviews__nav-button reviews__nav-button--left" type="button">
-          <svg class="reviews__nav-button-icon" width="50" height="26">
-            <use xlink:href="#icon-left-arrow"></use>
-          </svg>
-        </button>
-          <button class="reviews__nav-button reviews__nav-button--right" type="button">
-          <svg class="reviews__nav-button-icon" width="50" height="26">
-            <use xlink:href="#icon-right-arrow"></use>
-          </svg>
-        </button>
-        </div>
-        <button class="reviews__button button" type="button">Написать</button>
-      </div>
     </section>
 
     <section class="contacts">

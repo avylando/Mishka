@@ -99,23 +99,47 @@
 
   .main-menu__item--catalog {
     position: absolute;
-    right: calc(100% - 170px);
-    top: 68px;
+    right: calc(100% - 150px);
+    top: 105px;
     width: 150px;
+
+    .main-menu__link {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   .main-menu__item--form {
     position: absolute;
     right: calc(100% - 350px);
-    top: 68px;
+    top: 105px;
+
+    .main-menu__link {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   .main-menu__item--search {
-    width: 12.72%;
+    width: 23.63%;
+    border-right: 1px solid $border-color;
 
     .main-menu__caption {
       display: none;
     }
+  }
+
+  .main-menu__item--cart {
+    margin-left: auto;
+  }
+
+  .main-menu__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .main-menu__icon {
+    position: static;
   }
 }
 

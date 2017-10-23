@@ -50,7 +50,12 @@ body {
   padding-right: 30px;
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
+  body {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
   .container {
     padding-left: 50px;
     padding-right: 50px;

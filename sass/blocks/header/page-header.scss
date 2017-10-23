@@ -111,11 +111,16 @@
   }
 
   .page-header__title {
-    width: 47.9%;
+    width: 48.06%;
     border-bottom: none;
+    border-right: 1px solid $border-color;
+    padding-bottom: 23px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .page-header__logo {
+    padding-left: 0;
     margin-left: 0;
     margin-right: auto;
   }
@@ -130,6 +135,10 @@
 
   .page-header__toggle {
     display: none;
+  }
+
+  .page-header__main-nav {
+    width: 51.94%;
   }
 }
 
