@@ -1,3 +1,7 @@
+.reviews__title {
+  @include ttl-style;
+}
+
 .reviews__author {
   color: #000000;
 }
@@ -8,8 +12,11 @@
 
 .reviews__nav-button {
   width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: transparent;
   border: 1px solid $border-color;
+  outline: none;
   cursor: pointer;
 
   &:hover .reviews__nav-button-icon,

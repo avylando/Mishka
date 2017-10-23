@@ -1,7 +1,8 @@
 .page-footer {
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #f1f1f1;
 }
 
 .page-footer__wrapper {
@@ -42,14 +43,15 @@
 }
 
 .page-footer__social {
-  margin-top: 39px;
-  margin-bottom: 39px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $lightgrey-mod;
 }
 
 .page-footer__copyright {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .page-footer__developed {

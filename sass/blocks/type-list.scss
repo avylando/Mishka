@@ -1,0 +1,43 @@
+.type-list {
+  @include list-unstyle;
+}
+
+.type-list__item {
+  margin-bottom: 25px;
+}
+
+.type-list__input {
+  display: none;
+}
+
+.type-list__label {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #000000;
+  width: 77%;
+  padding-left: 60px;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $firmcolor;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.type-list__input:checked + label::before {
+  background-image: url("../img/radio-pin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}

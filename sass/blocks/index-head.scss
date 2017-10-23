@@ -9,6 +9,8 @@
 }
 
 .index-head__title {
+  @include ttl-style;
+
   font-size: 27px;
   width: 95%;
   padding-top: 70px;

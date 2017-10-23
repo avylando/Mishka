@@ -1,0 +1,14 @@
+.page-head {
+  background-color: #f1f1f1;
+}
+
+.page-head__title {
+  @include ttl-style;
+
+  font-size: 27px;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  margin-top: 0;
+  margin-bottom: 0;
+}

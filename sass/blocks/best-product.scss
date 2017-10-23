@@ -1,3 +1,7 @@
+.best-product__product-name {
+  @include ttl-style;
+}
+
 .best-product__subtitle {
   text-transform: uppercase;
   color: $blgreen;
@@ -19,11 +23,18 @@
   width: 36.54%;
 }
 
+.best-product__image {
+  display: block;
+  margin: 0 auto;
+}
+
 .best-product__footer {
   text-align: center;
+  margin-top: 27px;
 }
 
 .best-product__order-btn {
   font-size: 17px;
   width: 100%;
+  margin-top: 25px;
 }

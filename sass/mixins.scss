@@ -1,21 +1,13 @@
 @mixin ttl-style {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-@mixin big-ttl-style {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000000;
 }
 
 @mixin lr-padding-reset {
   margin-left: -30px;
   margin-right: -30px;
-}
-
-@mixin lr-margin {
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 @mixin list-unstyle {

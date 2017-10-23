@@ -1,0 +1,110 @@
+.fields__set {
+  position: relative;
+  padding-top: 35px;
+  margin-top: 37px;
+  border-top: 1px solid $blgreen;
+}
+
+.fields__set--contacts {
+  padding-top: 0;
+  border: none;
+
+  .fields__title {
+    top: -10px;
+  }
+}
+
+
+.fields__title {
+  position: absolute;
+  top: -27px;
+  left: 0;
+  display: inline-block;
+  width: 60px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 600;
+  color: $blgreen;
+  text-transform: uppercase;
+  background-color: #ffffff;
+}
+
+.fields__line {
+  margin-bottom: 20px;
+}
+
+.fields__label {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #000000;
+}
+
+.fields__textfield {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-color: $blgreen;
+  }
+}
+
+.fields__contacts-block {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 37px;
+  border-top: 1px solid $blgreen;
+
+  .fields__contact-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    display: inline-block;
+    fill: #cccccc;
+  }
+
+  &--mail {
+    .fields__title {
+      width: 85px;
+    }
+  }
+
+  .fields__textfield {
+    &:hover + .fields__contact-icon,
+    &:focus + .fields__contact-icon,
+    &:active + .fields__contact-icon {
+      fill: $blgreen;
+    }
+  }
+}
+
+.fields__textarea {
+  width: 100%;
+  height: 140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 2px solid $firmcolor;
+  resize: none;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $blgreen;
+  }
+}
+
+.fields__button-block {
+  padding-bottom: 55px;
+}
+
+.fields__button {
+  width: 100%;
+}

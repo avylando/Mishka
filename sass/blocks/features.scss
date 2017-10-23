@@ -1,3 +1,7 @@
+.features__title {
+  @include ttl-style;
+}
+
 .features__icon {
   fill: $blgreen;
 }

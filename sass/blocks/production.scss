@@ -1,0 +1,55 @@
+.production {
+  margin-bottom: 60px;
+  border: 1px solid $border-color;
+}
+
+.production__head,
+.production__footer {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.production__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.production__title-icon {
+  fill: $blgreen;
+}
+
+.production__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  width: 68.42%;
+}
+
+.production__video {
+  display: flex;
+  height: 150px;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.production__icon-play {
+  margin: auto;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+.production__button {
+  text-align: center;
+  margin-bottom: 30px;
+}
