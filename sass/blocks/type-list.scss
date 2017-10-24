@@ -41,3 +41,13 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media (min-width: $tablet-width) {
+  .type-list__item {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

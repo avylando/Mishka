@@ -41,3 +41,15 @@
   background-size: 70%;
   background-repeat: no-repeat;
 }
+
+@media (min-width: $tablet-width) {
+  .color-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .color-list__item {
+    width: 50%;
+  }
+}

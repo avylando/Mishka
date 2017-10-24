@@ -1,3 +1,11 @@
+.fields {
+  padding-top: 15px;
+}
+
+.fields__text {
+  margin-top: 0;
+}
+
 .fields__set {
   position: relative;
   padding-top: 35px;
@@ -107,4 +115,86 @@
 
 .fields__button {
   width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .fields {
+    padding-top: 45px;
+  }
+
+  .fields__set {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 50px;
+    border-top: none;
+  }
+
+  .fields__set--grey {
+    margin-left: -50px;
+    margin-right: -50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #f1f1f1;
+
+    .fields__title {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .fields__title {
+    position: static;
+    width: 25%;
+  }
+
+  .fields__box {
+    width: 75%;
+  }
+
+  .fields__line {
+    display: flex;
+    align-items: center;
+
+    .fields__label {
+      padding-right: 28px;
+    }
+  }
+
+  .fields__set--contacts {
+    flex-direction: column;
+  }
+
+  .fields__contacts-block {
+    display: flex;
+    border-top: none;
+
+    .fields__textfield {
+      background-color: #f1f1f1;
+    }
+
+    &--mail {
+      .fields__title {
+        width: 25%;
+      }
+    }
+  }
+
+  .fields__set--description {
+    padding-top: 0;
+  }
+
+  .fields__button-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .fields__button {
+    order: 1;
+    width: 230px;
+  }
+
+  .fields__note {
+    order: 2;
+  }
 }

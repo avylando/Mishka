@@ -30,6 +30,7 @@
   display: flex;
   height: 150px;
   background-image: url("../img/video-mobile@1x.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -49,7 +50,55 @@
   }
 }
 
+.production__footer {
+  margin-bottom: 30px;
+}
+
 .production__button {
   text-align: center;
-  margin-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .production {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__head {
+    order: 2;
+    justify-content: flex-start;
+    padding-left: 43px;
+    padding-right: 43px;
+    margin-top: 30px;
+  }
+
+  .production__video {
+    order: 1;
+    height: 455px;
+    background-image: url("../img/video-tablet@1x.jpg");
+  }
+
+  .production__footer {
+    order: 3;
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
+  .production__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .production__text {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .production__footer {
+    margin-bottom: 45px;
+  }
 }
