@@ -47,3 +47,18 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .features__title {
+    @include ttl-style-desktop;
+  }
+
+  .features__column {
+    width: 300px;
+  }
+}

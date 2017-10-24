@@ -37,9 +37,19 @@
 @media (min-width: $tablet-width) {
   .reviews {
     position: relative;
-    margin-bottom: 65px;
+    padding-bottom: 170px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 23px;
+      background-image: url("../img/bg-zigzag-line.svg");
+    }
   }
 
   .reviews__title {
@@ -47,6 +57,9 @@
     margin-top: 0;
 
     @include ttl-style-tablet;
+  }
+  .reviews__card {
+    position: relative;
   }
 
   .reviews__wrapper {
@@ -67,7 +80,21 @@
   .reviews__button {
     position: absolute;
     top: 40px;
-    right: 50px;
+    right: 0;
     width: 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    background-position-x: 50px;
+  }
+
+  .reviews__card {
+    padding-left: 175px;
+  }
+
+  .reviews__title {
+    @include ttl-style-desktop;
   }
 }

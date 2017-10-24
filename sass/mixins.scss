@@ -10,6 +10,11 @@
   line-height: 50px;
 }
 
+@mixin ttl-style-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
+
 @mixin lr-padding-reset {
   margin-left: -30px;
   margin-right: -30px;

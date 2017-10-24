@@ -106,11 +106,11 @@
     <div class="container">
 
       <article class="best-product">
+        <div class="best-product__title">
+          <h2 class="best-product__product-name">Вязаные корзинки</h2>
+          <h3 class="best-product__subtitle">Товар недели</h3>
+        </div>
         <div class="best-product__card">
-          <div class="best-product__title">
-            <h2 class="best-product__product-name">Вязаные корзинки</h2>
-            <h3 class="best-product__subtitle">Товар недели</h3>
-          </div>
           <div class="best-product__description">
             <p class="best-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
             <table class="best-product__options">
@@ -128,17 +128,20 @@
               </tr>
             </table>
           </div>
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
-          </picture>
           <div class="best-product__footer">
             <b class="best-product__price">Цена: 990 руб.</b>
             <button class="best-product__order-btn button">Заказать</button>
           </div>
         </div>
-      </article>
+        <div class="best-product__illustration">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+          </picture>
+        </div>
+    </div>
+    </article>
 
     </div>
 
@@ -219,8 +222,9 @@
         </div>
     </section>
 
-    <section class="contacts">
-      <div class="container">
+    <div class="container">
+
+      <section class="contacts">
         <div class="contacts__head">
           <h2 class="contacts__title">Контакты</h2>
           <svg class="contacts__flag" width="47" height="82">
@@ -237,14 +241,13 @@
             <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
           </div>
         </div>
-      </div>
-      <div class="contacts__map">
-        <div class="contacts__interactive-map" id="map"></div>
-      </div>
-      <div class="container">
+        <div class="contacts__map">
+          <div class="contacts__interactive-map" id="map"></div>
+        </div>
         <button class="contacts__button button" type="button">Напишите нам</button>
-      </div>
-    </section>
+      </section>
+
+    </div>
 
   </main>
 

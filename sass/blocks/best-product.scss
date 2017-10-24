@@ -1,3 +1,8 @@
+.best-product {
+  position: relative;
+  padding-bottom: 130px;
+}
+
 .best-product__product-name {
   @include ttl-style;
 }
@@ -7,6 +12,10 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $blgreen;
+}
+
+.best-product__text {
+  height: 72px;
 }
 
 .best-product__options {
@@ -27,10 +36,15 @@
 
 .best-product__image {
   display: block;
+  width: 100%;
   margin: 0 auto;
 }
 
 .best-product__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
   margin-top: 27px;
 }
@@ -45,17 +59,25 @@
 
 @media (min-width: $tablet-width) {
   .best-product {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
     margin-bottom: 50px;
   }
 
   .best-product__card {
-    overflow: hidden;
+    position: relative;
+    width: 43.41%;
   }
 
   .best-product__title {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .best-product__product-name {
     @include ttl-style-tablet;
@@ -66,13 +88,6 @@
     line-height: 17px;
     width: 75px;
     margin-right: 25px;
-  }
-
-  .best-product__description,
-  .best-product__footer {
-    float: left;
-    width: 50%;
-    padding-right: 44px;
   }
 
   .best-product__text {
@@ -89,25 +104,29 @@
     }
   }
 
-  .best-product__image {
-    float: right;
+  .best-product__illustration {
     width: 50%;
   }
 
-  .best-product__footer {
-    margin-top: calc(70px + (86vw - 768px) / 1.5);
+  // .best-product__footer {
+  //   position: static;
+  //   margin-top: calc(70px + (86vw - 768px) / 1.5);
 
-    @media (min-width: 982px) {
-      margin-top: calc(102px + (86vw - 768px) / 1.5);
-    }
-  }
+  //   @media (min-width: 982px) {
+  //     margin-top: calc(102px + (86vw - 768px) / 1.5);
+  //   }
+  // }
 
   .best-product__order-btn {
-    width: 290px;
+    width: 100%;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .best-product {
+    margin-top: 70px;
+  }
+
   .best-product__card {
     position: relative;
   }
@@ -120,23 +139,25 @@
 
   .best-product__product-name {
     order: 2;
+
+    @include ttl-style-desktop;
   }
 
   .best-product__subtitle {
     order: 1;
     margin-left: 45px;
-    margin-right: 60px;
+    margin-right: 50px;
   }
 
   .best-product__description {
-    width: 350px;
+    width: 340px;
     margin-top: 200px;
     margin-left: 175px;
   }
 
   .best-product__footer {
     width: 350px;
-    margin-top: 42px;
+    margin-top: 30px;
     margin-left: 175px;
   }
 }

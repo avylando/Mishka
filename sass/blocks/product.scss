@@ -78,3 +78,32 @@
     margin-top: auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .product {
+    flex-direction: column;
+    flex-basis: calc(33.33% - 34px);
+    margin-right: 51px;
+  }
+
+  .product__illustration {
+    width: 100%;
+  }
+
+  .product__wrapper {
+    width: 100%;
+  }
+
+  .product__head {
+    min-height: 120px;
+  }
+
+  .product__title {
+    margin-bottom: 0;
+  }
+
+  .product__description {
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+}
