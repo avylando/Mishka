@@ -1,6 +1,8 @@
 .reviews {
   position: relative;
   padding-bottom: 50px;
+  max-width: 1150px;
+  margin: 0 auto;
 
   &::after {
     position: absolute;

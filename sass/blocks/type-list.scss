@@ -1,9 +1,12 @@
 .type-list {
   @include list-unstyle;
+
+  margin-top: 7px;
+  margin-bottom: 48px;
 }
 
 .type-list__item {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .type-list__input {
@@ -17,7 +20,7 @@
   font-weight: 600;
   line-height: 18px;
   color: #000000;
-  width: 77%;
+  width: 85%;
   padding-left: 60px;
   outline: none;
   cursor: pointer;
