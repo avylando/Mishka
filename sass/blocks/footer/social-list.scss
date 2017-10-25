@@ -1,5 +1,7 @@
 .social-list {
   display: flex;
+  justify-content: space-between;
+  width: 145px;
 
   @include list-unstyle;
 }
@@ -31,7 +33,7 @@
   }
 }
 
-.social-list__item:nth-child(2) {
-  padding-left: 25px;
-  padding-right: 25px;
-}
+// .social-list__item:nth-child(2) {
+//   padding-left: 25px;
+//   padding-right: 25px;
+// }

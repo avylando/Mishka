@@ -1,5 +1,23 @@
+.features {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 34px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 7px;
+    background-image: url("../img/zigzag-line-mobile.png");
+  }
+}
+
 .features__title {
   @include ttl-style;
+
+  margin-bottom: 32px;
 }
 
 .features__icon {
@@ -8,22 +26,69 @@
 
 .features__text {
   font-size: 17px;
+  line-height: 20px;
   font-weight: 600;
-  color: #000000;
+  color: #2E2121;
+  margin-bottom: 0;
+}
+
+.features__block {
+  margin-bottom: 31px;
+
+  &--flower {
+    .features__icon {
+      margin-left: 8px;
+    }
+
+    .features__text {
+      width: 75%;
+      margin-top: 11px;
+    }
+  }
+
+  &--money {
+    .features__text {
+      width: 80%;
+    }
+  }
+
+  &--heart {
+    .features__icon {
+      margin-left: 7px;
+    }
+
+    .features__text {
+      width: 75%;
+    }
+  }
+
+  &--ball {
+    .features__icon {
+      margin-left: 3px;
+    }
+
+    .features__text {
+      width: 85%;
+    }
+  }
+
+  &--gift {
+    .features__icon {
+      margin-left: 3px;
+    }
+
+    .features__text {
+      width: 80%;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .features {
-    position: relative;
     padding-top: 50px;
     margin-bottom: 60px;
 
     &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      width: 100%;
       height: 23px;
       background-image: url("../img/bg-zigzag-line.svg");
     }
@@ -49,7 +114,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .features {
+  .features__title,
+  .features__wrapper {
     padding-left: 175px;
     padding-right: 175px;
   }

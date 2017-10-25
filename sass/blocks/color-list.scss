@@ -33,6 +33,15 @@
     border: 2px solid $firmcolor;
     cursor: pointer;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $blgreen;
+  }
+
+  &:active::before {
+    border-color: #e1e1e1;
+  }
 }
 
 .color-list__input:checked + label::before {
@@ -51,5 +60,15 @@
 
   .color-list__item {
     width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .color-list {
+    justify-content: space-between;
+  }
+
+  .color-list__item {
+    width: 26%;
   }
 }

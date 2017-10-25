@@ -34,6 +34,15 @@
     border-radius: 50%;
     cursor: pointer;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $blgreen;
+  }
+
+  &:active::before {
+    border-color: #e1e1e1;
+  }
 }
 
 .type-list__input:checked + label::before {

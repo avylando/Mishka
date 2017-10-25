@@ -12,15 +12,27 @@
     left: 0;
     top: 115px;
     z-index: 10;
-    width: 36.5%;
+    width: 37.3%;
   }
 
   .breadcrumbs__item {
     text-align: left;
-    width: 170px;
+    width: 180px;
   }
 
   .breadcrumbs__item-link {
-    color: inherit;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 600;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

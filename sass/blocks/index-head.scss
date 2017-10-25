@@ -1,7 +1,7 @@
 .index-head {
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -19%;
+  background-position: 50% -15%;
 }
 
 .index-head__breadcrumbs {
@@ -16,9 +16,8 @@
   @include ttl-style;
 
   font-size: 27px;
-  width: 95%;
   padding-top: 70px;
-  padding-bottom: 120px;
+  padding-bottom: 122px;
   margin: 0;
 }
 
@@ -55,12 +54,13 @@
   font-size: 19px;
   color: #ffffff;
   width: 37.5%;
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 30px;
 }
 
 .index-head__btn-icon {
   fill: #3bb09d;
+  width: 56px;
 }
 
 @media (min-width: $tablet-width) {
@@ -97,13 +97,19 @@
 
   .index-head__buttons {
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .index-head__button {
     width: 50%;
+    padding-bottom: 10px;
     margin-left: 0;
     margin-right: 0;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-5px);
+    }
   }
 
   .index-head__btn-title {

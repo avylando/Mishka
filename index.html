@@ -7,6 +7,36 @@
   <title>Добро пожаловать к "Мишке"!</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("../preview/mishka-index-mobile.jpg");
+    }
+    /* Tablet */
+
+    @media ( min-width: 768px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("../preview/mishka-index-tablet.jpg");
+      }
+    }
+    /* Desktop */
+
+    @media ( min-width: 1150px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("../preview/mishka-index-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
 </head>
 
 <body>
@@ -150,19 +180,19 @@
         <h2 class="features__title">Коротко о нас</h2>
         <div class="features__wrapper">
           <div class="features__column">
-            <div class="features__block">
+            <div class="features__block features__block--flower">
               <svg class="features__icon" width="32" height="37">
                 <use xlink:href="#icon-feature-flower"></use>
               </svg>
               <p class="features__text">Экологически чистые материалы</p>
             </div>
-            <div class="features__block">
+            <div class="features__block features__block--money">
               <svg class="features__icon" width="47" height="27">
                 <use xlink:href="#icon-feature-money"></use>
               </svg>
               <p class="features__text">Скандинавский стиль по российской цене</p>
             </div>
-            <div class="features__block">
+            <div class="features__block features__block--heart">
               <svg class="features__icon" width="33" height="28">
                 <use xlink:href="#icon-feature-heart"></use>
               </svg>
@@ -170,19 +200,19 @@
             </div>
           </div>
           <div class="features__column">
-            <div class="features__block">
+            <div class="features__block features__block--ball">
               <svg class="features__icon" width="34" height="34">
                 <use xlink:href="#icon-feature-ball"></use>
               </svg>
               <p class="features__text">Связано вручную с любовью и умилением</p>
             </div>
-            <div class="features__block">
+            <div class="features__block features__block--rocket">
               <svg class="features__icon" width="54" height="23">
                 <use xlink:href="#icon-feature-rocket"></use>
               </svg>
               <p class="features__text">Поддержка отечественного производителя</p>
             </div>
-            <div class="features__block">
+            <div class="features__block features__block--gift">
               <svg class="features__icon" width="33" height="32">
                 <use xlink:href="#icon-feature-gift"></use>
               </svg>
@@ -225,20 +255,22 @@
     <div class="container">
 
       <section class="contacts">
-        <div class="contacts__head">
-          <h2 class="contacts__title">Контакты</h2>
-          <svg class="contacts__flag" width="47" height="82">
-            <use xlink:href="#icon-flag"></use>
-          </svg>
-        </div>
         <div class="contacts__wrapper">
-          <div class="contacts__block contacts__block--mail">
-            <p class="contacts__type">e-mail:</p>
-            <p class="contacts__text">info@mimimishkashop.ru</p>
+          <div class="contacts__head">
+            <h2 class="contacts__title">Контакты</h2>
+            <svg class="contacts__flag" width="47" height="82">
+              <use xlink:href="#icon-flag"></use>
+            </svg>
           </div>
-          <div class="contacts__block contacts__block--adress">
-            <p class="contacts__type">адрес:</p>
-            <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          <div class="contacts__info">
+            <div class="contacts__block contacts__block--mail">
+              <p class="contacts__type">e-mail:</p>
+              <a class="contacts__link" href="#"><p class="contacts__text">info@mimimishkashop.ru</p></a>
+            </div>
+            <div class="contacts__block contacts__block--adress">
+              <p class="contacts__type">адрес:</p>
+              <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+            </div>
           </div>
         </div>
         <div class="contacts__map">

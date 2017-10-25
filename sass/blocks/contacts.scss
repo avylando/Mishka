@@ -1,3 +1,18 @@
+.contacts__title {
+  @include ttl-style;
+
+  font-size: 18px;
+  margin-top: 36px;
+}
+
+.contacts__flag {
+  display: none;
+}
+
+.contacts__info {
+  padding-bottom: 23px;
+}
+
 .contacts__block {
   display: flex;
   justify-content: space-between;
@@ -10,21 +25,31 @@
   }
 }
 
-.contacts__title {
-  @include ttl-style;
-}
-
-.contacts__flag {
-  display: none;
-}
-
 .contacts__type {
-  padding-right: 28px;
+  padding-right: 27px;
 }
 
 .contacts__text {
-  width: 69.23%;
+  line-height: 30px;
+  width: 55%;
   margin-right: auto;
+  margin-top: 12px;
+}
+
+.contacts__link {
+  color: inherit;
+  margin-right: auto;
+
+  &:hover .contacts__text,
+  &:focus .contacts__text {
+    color: $blgreen;
+    border-bottom-color: transparent;
+  }
+
+  &:active .contacts__text {
+    opacity: 0.3;
+    border-bottom-color: $blgreen;
+  }
 }
 
 .contacts__map {
@@ -37,7 +62,9 @@
 }
 
 .contacts__button {
+  font-size: 18px;
   width: 100%;
+  padding-bottom: 13px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -74,7 +101,7 @@
     display: block;
   }
 
-  .contacts__wrapper {
+  .contacts__info {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
@@ -94,7 +121,8 @@
     }
   }
 
-  .contacts__text {
+  .contacts__text,
+  .contacts__link {
     margin-right: 0;
   }
 
@@ -117,14 +145,20 @@
 @media (min-width: $desktop-width) {
   .contacts {
     display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    margin-bottom: 105px;
+  }
+
+  .contacts__wrapper {
     flex-direction: column;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    align-items: flex-end;
+    width: 44.76%;
   }
 
   .contacts__head {
     justify-content: flex-start;
-    width: 50%;
+    width: 100%;
   }
 
   .contacts__title {
@@ -140,28 +174,30 @@
     margin-left: 60px;
   }
 
-  .contacts__wrapper {
+  .contacts__info {
     flex-direction: column;
     align-items: flex-end;
-    width: 50%;
   }
 
   .contacts__block {
-    justify-content: flex-start;
-    width: 66.66%;
+    justify-content: space-between;
+    width: 62.77%;
+  }
+
+  .contacts__text {
+    width: 69%;
   }
 
   .contacts__map {
-    position: absolute;
-    right: 0;
-    top: 100px;
     width: 50%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .contacts__button {
     position: absolute;
-    left: 17%;
-    bottom: 80px;
+    left: 16%;
+    bottom: 0;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;

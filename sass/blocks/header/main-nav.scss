@@ -40,6 +40,12 @@
     opacity: 0.6;
   }
 
+  &:hover .main-nav__icon,
+  &:focus .main-nav__icon {
+    fill: $blgreen;
+    opacity: 1;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -99,20 +105,9 @@
     padding-bottom: 0;
   }
 
-  // .main-nav__item--form {
-  //   position: absolute;
-  //   right: calc(100% - 350px);
-  //   top: 105px;
-  //   z-index: 10;
-
-  //   .main-nav__link {
-  //     padding-top: 0;
-  //     padding-bottom: 0;
-  //   }
-  // }
-
   .main-nav__item--search {
     width: 23.63%;
+    border-left: 1px solid $border-color;
     border-right: 1px solid $border-color;
 
     .main-nav__caption {

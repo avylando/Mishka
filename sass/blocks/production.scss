@@ -1,8 +1,18 @@
 .production {
   position: relative;
-  padding-top: 80px;
+  padding-top: 95px;
   margin-bottom: 60px;
   border: 1px solid $border-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 5px 5px 0 #e8e8e8;
+  }
+
+  &:active {
+    box-shadow: 0 2px 5px 0 #e8e8e8;
+  }
 }
 
 .production__notice {
@@ -13,11 +23,10 @@
 .production__head {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 13%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .production__title-icon {
@@ -28,8 +37,9 @@
   font-size: 17px;
   font-weight: 600;
   color: #000000;
-  margin-left: 20px;
-  margin-top: 25px;
+  margin-left: 23px;
+  margin-top: 23px;
+  width: 200px;
 }
 
 .production__video {
@@ -60,8 +70,17 @@
   margin-bottom: 30px;
 }
 
+.production__text {
+  font-size: 13px;
+  margin-top: 26px;
+  margin-bottom: 25px;
+}
+
 .production__button {
+  font-size: 17px;
+  line-height: 16px;
   text-align: center;
+  padding-top: 17px;
 }
 
 @media (min-width: $tablet-width) {

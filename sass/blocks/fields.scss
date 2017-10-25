@@ -68,6 +68,10 @@
   margin-bottom: 37px;
   border-top: 1px solid $blgreen;
 
+  .fields__box {
+    position: relative;
+  }
+
   .fields__contact-icon {
     position: absolute;
     bottom: 10px;
@@ -110,7 +114,7 @@
 }
 
 .fields__button-block {
-  padding-bottom: 55px;
+  margin-bottom: 55px;
 }
 
 .fields__button {
@@ -127,6 +131,11 @@
     justify-content: flex-start;
     padding-top: 50px;
     border-top: none;
+
+    .fields__title {
+      position: static;
+      width: 25%;
+    }
   }
 
   .fields__set--grey {
@@ -141,10 +150,7 @@
     }
   }
 
-  .fields__title {
-    position: static;
-    width: 25%;
-  }
+
 
   .fields__box {
     width: 75%;
@@ -170,12 +176,6 @@
     .fields__textfield {
       background-color: #f1f1f1;
     }
-
-    &--mail {
-      .fields__title {
-        width: 25%;
-      }
-    }
   }
 
   .fields__set--description {
@@ -196,5 +196,29 @@
 
   .fields__note {
     order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__text,
+  .fields__button-block {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .fields__set {
+    padding-right: 175px;
+
+    &--grey {
+      padding-right: 225px;
+    }
+
+    .fields__title {
+      width: 20.24%;
+    }
+  }
+
+  .fields__button-block {
+    width: 96%;
   }
 }
