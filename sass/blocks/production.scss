@@ -92,15 +92,16 @@
 
   .production__notice {
     order: 2;
-    padding-left: 43px;
-    padding-right: 43px;
-    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 33px;
   }
 
   .production__video {
     order: 1;
     height: 455px;
     background-image: url("../img/video-tablet@1x.jpg");
+    background-position: 0 0;
   }
 
   .production__head {
@@ -111,14 +112,16 @@
   .production__title {
     font-size: 20px;
     line-height: 24px;
+    width: 85%;
+    margin-left: 33px;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .production__text {
     font-size: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 28px;
+    margin-bottom: 35px;
   }
 
   .production__footer {
@@ -129,15 +132,17 @@
 @media (min-width: $desktop-width) {
   .production {
     flex-direction: row;
+    margin-bottom: 104px;
   }
+
   .production__video {
     width: 64.95%;
   }
 
   .production__notice {
     width: 35.05%;
-    padding-left: 73px;
-    padding-right: 60px;
+    padding-left: 79px;
+    padding-right: 57px;
   }
 
   .production__head {
@@ -145,7 +150,13 @@
   }
 
   .production__title {
+    width: 90%;
     margin-left: 0;
     margin-top: 20px;
+  }
+
+  .production__text {
+    margin-top: 35px;
+    margin-bottom: 45px;
   }
 }

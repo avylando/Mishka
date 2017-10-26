@@ -23,15 +23,29 @@
       bottom: 0;
       left: 0;
       width: 100%;
+      height: 23px;
+      background-image: url("../img/zigzag-fill-tablet.png");
+    }
+  }
+
+  .page-head__title {
+    padding-top: 94px;
+    padding-bottom: 92px;
+
+    @include ttl-style-tablet;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-head {
+    &::after {
       height: 34px;
       background-image: url("../img/bg-zigzag-fill.svg");
     }
   }
 
   .page-head__title {
-    padding-top: 100px;
-    padding-bottom: 100px;
-
-    @include ttl-style-tablet;
+    font-size: 53px;
+    padding-bottom: 126px;
   }
 }

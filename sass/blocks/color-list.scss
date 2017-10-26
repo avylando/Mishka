@@ -58,10 +58,23 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 8px;
   }
 
   .color-list__item {
     width: 50%;
+    margin-bottom: 46px;
+  }
+
+  .color-list__label {
+    font-size: 19px;
+    padding-left: 80px;
+
+    &::before {
+      top: -15px;
+      width: 54px;
+      height: 52px;
+    }
   }
 }
 

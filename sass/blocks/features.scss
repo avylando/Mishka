@@ -85,17 +85,19 @@
 
 @media (min-width: $tablet-width) {
   .features {
-    padding-top: 50px;
-    margin-bottom: 60px;
+    padding-top: 83px;
+    margin-bottom: 27px;
+    margin-top: 0;
 
     &::before {
-      height: 23px;
-      background-image: url("../img/bg-zigzag-line.svg");
+      height: 17px;
+      background-image: url("../img/zigzag-line-tablet.png");
     }
   }
 
   .features__title {
     margin-top: 0;
+    margin-bottom: 51px;
 
     @include ttl-style-tablet;
   }
@@ -106,14 +108,57 @@
 
   .features__column {
     width: 50%;
+  }
 
-    &:first-child .features__text {
-      width: 71.86%;
+  .features__block {
+    margin-bottom: 56px;
+
+    &--flower {
+      .features__text {
+        width: 65%;
+      }
     }
+
+    &--money {
+      .features__text {
+        width: 75%;
+      }
+    }
+
+    &--heart {
+      .features__text {
+        width: 70%;
+      }
+    }
+
+    &--ball {
+      .features__text {
+        margin-top: 11px;
+      }
+    }
+
+    &--rocket {
+      .features__icon {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  .features__text {
+    font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    margin-bottom: 36px;
+
+    &::before {
+      height: 23px;
+      background-image: url("../img/bg-zigzag-line.svg");
+    }
+  }
+
   .features__title,
   .features__wrapper {
     padding-left: 175px;
@@ -124,7 +169,23 @@
     @include ttl-style-desktop;
   }
 
-  .features__column {
-    width: 300px;
+  .features__block {
+    &--money {
+      .features__text {
+        width: 70%;
+      }
+    }
+
+    &--heart {
+      .features__text {
+        width: 65%;
+        margin-top: 14px;
+      }
+
+      .features__icon {
+        margin-left: 12px;
+        margin-top: 9px;
+      }
+    }
   }
 }

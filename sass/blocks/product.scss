@@ -82,6 +82,7 @@
 @media (min-width: $tablet-width) {
   .product {
     display: flex;
+    margin-bottom: 54px;
   }
 
   .product__illustration {
@@ -99,6 +100,9 @@
     font-size: 20px;
     line-height: 24px;
     text-align: left;
+    width: 85%;
+    margin-top: 25px;
+    margin-bottom: 5px;
   }
 
   .product__description {
@@ -106,7 +110,11 @@
   }
 
   .product__footer {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 19px;
     margin-top: auto;
+    margin-bottom: 23px;
   }
 }
 
@@ -126,15 +134,20 @@
   }
 
   .product__head {
-    min-height: 120px;
+    min-height: 123px;
   }
 
   .product__title {
+    width: 90%;
     margin-bottom: 0;
   }
 
   .product__description {
     padding-bottom: 15px;
-    margin-top: 10px;
+    margin-top: 6px;
+  }
+
+  .product__footer {
+    padding-left: 0;
   }
 }

@@ -188,6 +188,7 @@
     z-index: 10;
     right: 0;
     top: 105px;
+    font-size: 15px;
     margin: 0;
   }
 }
@@ -195,12 +196,12 @@
 @media (min-width: $desktop-width) {
   .page-header__title {
     position: absolute;
-    left: 42%;
+    left: 43%;
     right: 0;
     top: 0;
     z-index: 200;
     width: 19.05%;
-    padding-top: 15px;
+    padding-top: 8px;
     padding-bottom: 0;
     border-right: none;
   }
@@ -221,6 +222,6 @@
   }
 
   .page-header__note {
-    top: 115px;
+    top: 104px;
   }
 }
