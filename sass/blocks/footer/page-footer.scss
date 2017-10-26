@@ -140,9 +140,16 @@
     margin-right: auto;
   }
 
-  .page-footer__logo,
-  .page-footer__copyright {
+  .page-footer__logo {
     width: 16.3%;
+  }
+
+  .page-footer__copyright {
+    width: 17.7%;
+  }
+
+  .page-footer__academy-link {
+    margin-top: 8px;
   }
 
   .page-footer__developed {

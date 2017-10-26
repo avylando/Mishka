@@ -58,12 +58,17 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 10px;
   }
 
   .color-list__item {
     width: 50%;
     margin-bottom: 46px;
+
+    &:nth-child(2n) {
+      width: 47%;
+      margin-left: 12px;
+    }
   }
 
   .color-list__label {
@@ -81,9 +86,15 @@
 @media (min-width: $desktop-width) {
   .color-list {
     justify-content: space-between;
+    margin-top: 18px;
   }
 
   .color-list__item {
     width: 26%;
+
+    &:nth-child(2n) {
+      width: 26%;
+      margin-left: 0;
+    }
   }
 }
