@@ -1,5 +1,4 @@
 .modal {
-  display: none;
   position: fixed;
   top: 30%;
   left: 0;
@@ -12,8 +11,50 @@
   box-shadow: 0 5px 10px 0 #c6c6c6;
 }
 
+@keyframes jump {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  10% {
+    transform: translateY(-40%);
+  }
+
+  20% {
+    transform: translateY(20%);
+  }
+
+  40% {
+    transform: translateY(-10%);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .modal--show {
   display: block;
+  height: auto;
+  animation-name: jump;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+}
+
+.modal--close {
+  display: none;
+}
+
+.modal__head {
+  position: relative;
 }
 
 .modal__title {
@@ -24,6 +65,25 @@
   text-align: center;
   width: 160px;
   margin: 20px auto;
+}
+
+.modal__close-button {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .modal__text {
@@ -105,8 +165,17 @@
     }
   }
 
+  .modal--success {
+    width: 470px;
+  }
+
   .modal__title {
     width: 100%;
+  }
+
+  .modal__close-button {
+    right: -85px;
+    top: 0;
   }
 
   .modal__label {

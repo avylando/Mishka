@@ -265,9 +265,16 @@
     </div>
   </footer>
 
-  <div class="modal modal-add">
+  <div class="modal modal--add modal--close">
     <div class="container">
-      <h2 class="modal__title">Добавить в корзину</h2>
+      <div class="modal__head">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <button class="modal__close-button" type="button">
+              <svg class="modal__close-icon" width="20" height="20">
+                <use xlink:href="#icon-menu-close"></use>
+              </svg>
+            </button>
+      </div>
       <p class="modal__text">Выберите размер:</p>
       <ul class="modal__list">
         <li class="modal__item">
@@ -283,7 +290,14 @@
           <label class="modal__label" for="L-size" tabindex="0">L</label>
         </li>
       </ul>
-      <button class="modal__button" type="button">Добавить</button>
+      <button class="modal__button modal__button--add" type="button">Добавить</button>
+    </div>
+  </div>
+
+  <div class="modal modal--success modal--close">
+    <div class="container">
+      <h2 class="modal__title">Товар добавлен!</h2>
+      <button class="modal__button modal__button--close" type="button">Продолжить покупки</button>
     </div>
   </div>
 
@@ -291,7 +305,9 @@
   <script src="js/order-script.min.js"></script>
   <script src="js/polyfills/picturefill.min.js"></script>
   <script src="js/polyfills/svg4everybody.min.js"></script>
-  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <script>
+    svg4everybody(); // run it now or whenever you are ready
+  </script>
 
 </body>
 
