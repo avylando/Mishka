@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
   <title>Добро пожаловать к "Мишке"!</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -36,6 +37,31 @@
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
   <script src="../node_modules/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
+
+  <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/1.0/?key=AEfQ8lkBAAAANh0hcgIAfqOYxSoXUAKwRddbJOG0M0PkTysAAAAAAAAAAACeTt7LPQu4YqQL01lj7rOC9tTYjg==" type="text/javascript"/>
+  <script type="text/javascript">
+    // Создает обработчик события window.onLoad
+    YMaps.jQuery(function () {
+      // Создает экземпляр карты и привязывает его к созданному контейнеру
+      var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+
+      // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+      map.setCenter(new YMaps.GeoPoint(55.75399400, 37.62209300), 17);
+      var placemark = new YMaps.Placemark(new YMaps.GeoPoint(55.75399400, 37.62209300));
+
+      // Добавляет метку на карту
+      map.addOverlay(placemark);
+
+      // Создает стиль
+      var s = new YMaps.Style();
+
+      // Создает стиль значка метки
+      s.iconStyle = new YMaps.IconStyle();
+      s.iconStyle.href = "/img/icon-map-pin.svg";
+      s.iconStyle.size = new YMaps.Point(66, 101);
+    })
+  </script>
 
 </head>
 
@@ -265,7 +291,9 @@
           <div class="contacts__info">
             <div class="contacts__block contacts__block--mail">
               <p class="contacts__type">e-mail:</p>
-              <a class="contacts__link" href="#"><p class="contacts__text">info@mimimishkashop.ru</p></a>
+              <a class="contacts__link" href="#">
+                <p class="contacts__text">info@mimimishkashop.ru</p>
+              </a>
             </div>
             <div class="contacts__block contacts__block--adress">
               <p class="contacts__type">адрес:</p>
@@ -274,7 +302,7 @@
           </div>
         </div>
         <div class="contacts__map">
-          <div class="contacts__interactive-map" id="map"></div>
+          <div class="contacts__interactive-map" id="YMapsID"></div>
         </div>
         <button class="contacts__button button" type="button">Напишите нам</button>
       </section>
@@ -333,6 +361,35 @@
   </footer>
 
   <script src="js/toggle.min.js"></script>
+  <script src="js/polyfills/picturefill.min.js"></script>
+  <script src="js/polyfills/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody(); // run it now or whenever you are ready
+  </script>
+  <!-- <script>
+    function initMap() {
+      var uluru = {lat: 59.938703, lng: 30.323030};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: uluru
+      });
+
+      var image = {
+        url: 'img/icon-map-pin.svg',
+        scaledSize: new google.maps.Size(66, 101),
+      }
+
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+        optimized: false,
+        icon: image
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3ZvU65IhoUz5HyCwaxZ_W-Lkdx_OdYTM&callback=initMap">
+  </script> -->
 
 </body>
 
