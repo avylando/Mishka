@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:vml="urn:schemas-microsoft-com:vml">
 
 <head>
   <meta charset="utf-8">
@@ -37,31 +37,6 @@
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
   <script src="../node_modules/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
-
-  <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
-  <script src="https://api-maps.yandex.ru/1.0/?key=AEfQ8lkBAAAANh0hcgIAfqOYxSoXUAKwRddbJOG0M0PkTysAAAAAAAAAAACeTt7LPQu4YqQL01lj7rOC9tTYjg==" type="text/javascript"/>
-  <script type="text/javascript">
-    // Создает обработчик события window.onLoad
-    YMaps.jQuery(function () {
-      // Создает экземпляр карты и привязывает его к созданному контейнеру
-      var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
-
-      // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-      map.setCenter(new YMaps.GeoPoint(55.75399400, 37.62209300), 17);
-      var placemark = new YMaps.Placemark(new YMaps.GeoPoint(55.75399400, 37.62209300));
-
-      // Добавляет метку на карту
-      map.addOverlay(placemark);
-
-      // Создает стиль
-      var s = new YMaps.Style();
-
-      // Создает стиль значка метки
-      s.iconStyle = new YMaps.IconStyle();
-      s.iconStyle.href = "/img/icon-map-pin.svg";
-      s.iconStyle.size = new YMaps.Point(66, 101);
-    })
-  </script>
 
 </head>
 
@@ -251,31 +226,49 @@
 
     <section class="reviews">
       <div class="container">
-        <div class="reviews__card">
+        <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы</h2>
-          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
-            В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-            больше лайков!</p>
-          <div class="reviews__wrapper">
+          <div class="reviews__card reviews__card--left reviews__card--show">
+            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
+              В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также
+              набирают больше лайков!</p>
             <div class="reviews__caption">
               <h3 class="reviews__author">Анастасия Красильникова</h3>
               <p class="reviews__nickname">@misssssiskras</p>
             </div>
-            <div class="reviews__navigation">
-              <button class="reviews__nav-button reviews__nav-button--left" type="button">
+          </div>
+          <div class="reviews__card reviews__card--center reviews__card--hide">
+            <p class="reviews__text">Мишка - это прекрасный магазин, в котором каждый имеет возможность выбрать себе модную игрушку на свой вкус!
+              Здесь есть место творческим идеям, ярким фантазиям и любви, с которой была сделана каждая игрушка!</p>
+            <div class="reviews__caption">
+              <h3 class="reviews__author">Валерий Смольников</h3>
+              <p class="reviews__nickname">@kuzyayaya_net</p>
+            </div>
+          </div>
+          <div class="reviews__card reviews__card--right reviews__card--hide">
+            <p class="reviews__text">Магазин игрушек Мишка мне понравился с первого взгляда. Чувствуется красота во всём! Здесь работают мастера в
+              своём деле, начиная от вязания шерстяных корзинок до изящно исполненной верстки сайта!
+            </p>
+            <div class="reviews__caption">
+              <h3 class="reviews__author">Антон Домов</h3>
+              <p class="reviews__nickname">@dogs__house</p>
+            </div>
+          </div>
+          <div class="reviews__navigation">
+            <button class="reviews__nav-button reviews__nav-button--left" type="button">
                 <svg class="reviews__nav-button-icon" width="50" height="26">
                   <use xlink:href="#icon-left-arrow"></use>
                 </svg>
               </button>
-              <button class="reviews__nav-button reviews__nav-button--right" type="button">
+            <button class="reviews__nav-button reviews__nav-button--right" type="button">
                 <svg class="reviews__nav-button-icon" width="50" height="26">
                   <use xlink:href="#icon-right-arrow"></use>
                 </svg>
               </button>
-            </div>
           </div>
           <button class="reviews__button button" type="button">Написать</button>
         </div>
+      </div>
     </section>
 
     <div class="container">
@@ -302,7 +295,7 @@
           </div>
         </div>
         <div class="contacts__map">
-          <div class="contacts__interactive-map" id="YMapsID"></div>
+          <div class="contacts__interactive-map" id="map"></div>
         </div>
         <button class="contacts__button button" type="button">Напишите нам</button>
       </section>
@@ -360,17 +353,41 @@
     </div>
   </footer>
 
+  <div class="modal modal-add">
+    <div class="container">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <ul class="modal__list">
+        <li class="modal__item">
+          <input class="modal__input" id="S-size" name="size" value="S-size" type="radio" checked>
+          <label class="modal__label" for="S-size" tabindex="0">S</label>
+        </li>
+        <li class="modal__item">
+          <input class="modal__input" id="M-size" name="size" value="M-size" type="radio">
+          <label class="modal__label" for="M-size" tabindex="0">M</label>
+        </li>
+        <li class="modal__item">
+          <input class="modal__input" id="L-size" name="size" value="L-size" type="radio">
+          <label class="modal__label" for="L-size" tabindex="0">L</label>
+        </li>
+      </ul>
+      <button class="modal__button" type="button">Добавить</button>
+    </div>
+  </div>
+
   <script src="js/toggle.min.js"></script>
+  <script src="js/order-script.min.js"></script>
+  <script src="js/reviews-slider.min.js"></script>
   <script src="js/polyfills/picturefill.min.js"></script>
   <script src="js/polyfills/svg4everybody.min.js"></script>
   <script>
     svg4everybody(); // run it now or whenever you are ready
   </script>
-  <!-- <script>
+  <script>
     function initMap() {
-      var uluru = {lat: 59.938703, lng: 30.323030};
+      var uluru = { lat: 59.938703, lng: 30.323030 };
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
+        zoom: 17,
         center: uluru
       });
 
@@ -387,9 +404,9 @@
       });
     }
   </script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3ZvU65IhoUz5HyCwaxZ_W-Lkdx_OdYTM&callback=initMap">
-  </script> -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGuxvuyKDC57dlxzX-CwQXl2HE7N3oQlg&callback=initMap">
+
+  </script>
 
 </body>
 

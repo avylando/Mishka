@@ -87,7 +87,7 @@
 
 @media (min-width: $tablet-width) {
   .features {
-    padding-top: 83px;
+    padding-top: 67px;
     margin-bottom: 27px;
     margin-top: 0;
 
@@ -153,6 +153,7 @@
 
 @media (min-width: $desktop-width) {
   .features {
+    padding-top: 85px;
     margin-bottom: 36px;
 
     &::before {
