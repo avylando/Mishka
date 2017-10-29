@@ -44,6 +44,7 @@
 
 .production__video {
   display: flex;
+  position: relative;
   height: 150px;
   background-image: url("../img/video-mobile@1x.jpg");
   background-position: center;
@@ -51,7 +52,22 @@
   background-size: 100%;
 }
 
+.production__media {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.production__media--show {
+  display: block;
+}
+
 .production__icon-play {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: auto;
   cursor: pointer;
 
@@ -64,6 +80,10 @@
     opacity: 0.5;
     transform: scale(0.8);
   }
+}
+
+.production__icon-play--hide {
+  display: none;
 }
 
 .production__footer {

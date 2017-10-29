@@ -2,41 +2,13 @@
 <html lang="ru">
 
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="yandex-verification" content="f9909c58cc5069e4">
   <title>Каталог товаров</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("../preview/mishka-catalog-mobile.jpg");
-    }
-    /* Tablet */
-
-    @media ( min-width: 768px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("../preview/mishka-catalog-tablet.jpg");
-      }
-    }
-    /* Desktop */
-
-    @media ( min-width: 1150px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("../preview/mishka-catalog-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
 </head>
 
@@ -135,7 +107,7 @@
             </div>
             <div class="product__footer">
               <b class="product__price">1 200 руб.</b>
-              <button class="product__order-button" type="button">
+              <button class="product__order-button product__order-button--first" type="button">
                 <svg class="product__cart-icon" width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -159,7 +131,7 @@
             </div>
             <div class="product__footer">
               <b class="product__price">690 руб.</b>
-              <button class="product__order-button" type="button">
+              <button class="product__order-button product__order-button--second" type="button">
                 <svg class="product__cart-icon" width="20" height="19">
                     <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -183,7 +155,7 @@
             </div>
             <div class="product__footer">
               <b class="product__price">1 500 руб.</b>
-              <button class="product__order-button" type="button">
+              <button class="product__order-button product__order-button--third" type="button">
                 <svg class="product__cart-icon" width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -199,6 +171,10 @@
           <svg class="production__icon-play" width="101" height="77">
             <use xlink:href="#icon-play"></use>
           </svg>
+          <iframe class="production__media" width="384" height="150" src="https://www.youtube.com/embed/F6gnmChf7fM?origin=https://newborn74.github.io/mishka" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+          <!-- <video class="production__media" width="100" height="50">
+            <source src="https://www.youtube.com/embed/F6gnmChf7fM">
+          </video> -->
         </div>
         <div class="production__notice">
           <div class="production__head">
@@ -304,8 +280,10 @@
     </div>
   </div>
 
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/toggle.min.js"></script>
   <script src="js/order-script.min.js"></script>
+  <script src="js/videoplay.min.js"></script>
   <script src="js/polyfills/picturefill.min.js"></script>
   <script src="js/polyfills/svg4everybody.min.js"></script>
   <script>
