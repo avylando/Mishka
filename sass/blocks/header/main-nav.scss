@@ -8,8 +8,8 @@
   display: block;
   border-bottom: 1px solid $border-color;
   cursor: pointer;
-
-  @include lr-padding-reset;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .main-nav__item--search,
@@ -93,10 +93,10 @@
   }
 
   .main-nav__item {
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
     border: none;
   }
 

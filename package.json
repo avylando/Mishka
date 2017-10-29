@@ -8,7 +8,8 @@
     "start": "gulp serve",
     "stylelint": "stylelint 'sass/**/*.scss' --syntax scss",
     "test": "npm run editorconfig",
-    "optim": "gulp imagemin"
+    "optim": "gulp imagemin",
+    "docs": "gulp docs"
   },
   "repository": {
     "type": "git",
